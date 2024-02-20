@@ -30,5 +30,3 @@ public class HomeController : Controller
     }
 }
 
-//test commit
-
