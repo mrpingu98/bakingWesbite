@@ -1,28 +1,39 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿//applies default settings, looks at appsettings.json and loads settings from that file
+//also gives us access to any registered services 
+using baking_website.Models;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+
+//registering services here 
+//this makes sure our application knows about aspnetcore and MVC - bringing in frameworkd services that enable MVC in the app 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
+builder.Services.AddScoped<IPieRepository, MockPieRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+//once app is built, can start bringing in middleware components 
+//they should be placed behind the .Build() statement, but before .Run()
 
-app.UseHttpsRedirection();
+//////////////////////////////////////start of middleware
+//middleware for returning static files - configured to look for incoming requests that are static files (e.g. jpg)
+//then will look in the www folder for that file and return it 
 app.UseStaticFiles();
 
-app.UseRouting();
+//want to see errors in my app 
+//this shows like detailed info on errors, but don't want users to see it - wrap if statement to only call it if app is 
+//running in development mode
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+//middleware so you can navigate to pages 
+//sets some defaults for an MVC to route to the pages(views) that we will have
+//this is endpoint middleware
+app.MapDefaultControllerRoute();
+////////////////////////////////////////// end of middleware
 
 app.Run();
+
 
