@@ -1,14 +1,21 @@
 ﻿//applies default settings, looks at appsettings.json and loads settings from that file
 //also gives us access to any registered services 
 using baking_website.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //registering services here 
 //this makes sure our application knows about aspnetcore and MVC - bringing in frameworkd services that enable MVC in the app 
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
-builder.Services.AddScoped<IPieRepository, MockPieRepository>();
+//builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
+//builder.Services.AddScoped<IPieRepository, MockPieRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IPieRepository, PieRepository>();
+builder.Services.AddDbContext<BethanysPieShopDbContext>(options => {
+    options.UseSqlServer(
+        builder.Configuration["ConnectionStrings:BethanysPieShopDbContextConnection"]);
+});
 
 var app = builder.Build();
 
