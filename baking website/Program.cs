@@ -2,6 +2,7 @@
 //also gives us access to any registered services 
 using baking_website.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
 builder.Services.AddDbContext<BethanysPieShopDbContext>(options => {
-    options.UseSqlServer(
+    options.UseSqlite(
         builder.Configuration["ConnectionStrings:BethanysPieShopDbContextConnection"]);
 });
 
