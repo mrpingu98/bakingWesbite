@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "h1zCQCGEEtha6S24BZVIUiKIBsCCujQ+G/ULjRlYiXenpfEo/ddDtWxgvS8ZJuN+OgWpvY+ABxKSa7Q5GEFN4w==",
+  "dgSpecHash": "u62OPOnJVPcmFqSyEDDNXhw/pwpnkKzBfobCPDsWc4IgrWqLSnMPOi8PX7Q6B4PofhVJWP6WEprReiH88ETdNw==",
   "success": true,
   "projectFilePath": "/Users/manvirsalh/Documents/BethanysShop/baking website/baking website.csproj",
   "expectedPackageFiles": [
@@ -15,12 +15,12 @@
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore/7.0.16/microsoft.entityframeworkcore.7.0.16.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.16/microsoft.entityframeworkcore.abstractions.7.0.16.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.16/microsoft.entityframeworkcore.analyzers.7.0.16.nupkg.sha512",
-    "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.design/7.0.16/microsoft.entityframeworkcore.design.7.0.16.nupkg.sha512",
+    "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.design/7.0.0/microsoft.entityframeworkcore.design.7.0.0.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.16/microsoft.entityframeworkcore.relational.7.0.16.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.sqlite/7.0.0/microsoft.entityframeworkcore.sqlite.7.0.0.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/7.0.0/microsoft.entityframeworkcore.sqlite.core.7.0.0.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.16/microsoft.entityframeworkcore.sqlserver.7.0.16.nupkg.sha512",
-    "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.16/microsoft.entityframeworkcore.tools.7.0.16.nupkg.sha512",
+    "/Users/manvirsalh/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.0/microsoft.entityframeworkcore.tools.7.0.0.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/Users/manvirsalh/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
