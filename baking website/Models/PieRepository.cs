@@ -12,25 +12,12 @@ namespace baking_website.Models
 			_bethanysPieShopDbContext = bethanysPieShopDBContext;
 		}
 
-        public IEnumerable<Pie> AllPies {
-            get
-            {
-                return _bethanysPieShopDbContext.Pies.Include(c => c.Category);
-            }
-        }
+        public IEnumerable<Pie> AllPies => _bethanysPieShopDbContext.Pies.Include(c => c.Category);
 
-        public IEnumerable<Pie> PiesOfTheWeek
-        {
-            get
-            {
-                return _bethanysPieShopDbContext.Pies.Include(c => c.Category).Where(p => p.IsPieOfTheWeek);
-            }
-        }
+        public IEnumerable<Pie> PiesOfTheWeek => _bethanysPieShopDbContext.Pies.Include(c => c.Category).Where(p => p.IsPieOfTheWeek);
+     
+        public Pie? GetPieById(int pieId) => _bethanysPieShopDbContext.Pies.FirstOrDefault(p => p.PieId == pieId);
 
-        public Pie? GetPieById(int pieId)
-        {
-            return _bethanysPieShopDbContext.Pies.FirstOrDefault(p => p.PieId == pieId);
-        }
     }
 }
 
