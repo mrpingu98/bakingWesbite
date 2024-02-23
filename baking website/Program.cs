@@ -39,7 +39,7 @@ if (app.Environment.IsDevelopment())
 //middleware so you can navigate to pages 
 //sets some defaults for an MVC to route to the pages(views) that we will have
 //this is endpoint middleware
-app.MapDefaultControllerRoute();
+app.MapDefaultControllerRoute();  // {controller}/{action}/{id?}
 ////////////////////////////////////////// end of middleware
 DbInitialiser.Seed(app); 
 app.Run();
